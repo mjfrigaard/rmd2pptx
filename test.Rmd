@@ -1,0 +1,45 @@
+---
+title: "pptx from Rmd"
+subtitle: "subtitle: pptx from Rmd"
+output: 
+  powerpoint_presentation:
+    reference_doc: "reference_test.pptx"
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 20px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+
+## Code font sizes in PPTX
+
+The text body is Ubuntu (like the `reference_text.pptx`) size 28
+
+<br>
+
+`This inline code is Courier size 28`
+
+<br>
+
+```{r , echo=TRUE, eval=FALSE}
+print("All the code block code is also Courier size 28")
+```
+
+<br>
+
+```{r , echo=FALSE, eval=TRUE}
+print("All the code output is also Courier size 28")
+```
